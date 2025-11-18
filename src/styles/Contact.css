@@ -75,7 +75,7 @@
 
 .contact-form input,
 .contact-form textarea {
-  width: auto;
+  width: 100%;
   background: rgba(255, 255, 255, 0.15);
   border: none;
   border-radius: 10px;
@@ -155,7 +155,7 @@
   }
 
   .contact-form {
-    width: auto;
+    width: 100%;
     padding: 25px;
   }
 
