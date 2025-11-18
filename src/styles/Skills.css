@@ -1,0 +1,119 @@
+.skills-section {
+  padding: 100px 40px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #66fcf1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skills-subtitle {
+  color: #c5c6c7;
+  font-size: 1rem;
+  margin-bottom: 60px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* === Skill Cards === */
+.skill-card {
+  border: 1px solid rgba(200, 186, 228, 0.1);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(6, 6, 7, 0.959);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at top left, #45a29e, transparent 60%);
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 0.4;
+  top: -20%;
+  left: -20%;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: #45a29e;
+}
+
+/* === Icons === */
+.icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #45a29e;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover .icon {
+  color: #66fcf1;
+  transform: rotate(10deg) scale(1.1);
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: #fff;
+}
+
+/* === Floating animation for all cards === */
+.skill-card {
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+.skill-card:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+.skill-card:nth-child(3n) {
+  animation-delay: 1s;
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 80px 20px;
+  }
+
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    gap: 25px;
+  }
+}

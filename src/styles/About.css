@@ -1,0 +1,201 @@
+.about-section {
+  padding: 90px 10%;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  scroll-margin-top: 80px;
+  overflow-x: hidden;
+}
+
+/* === TITLES === */
+.about-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease forwards;
+  letter-spacing: 1px;
+}
+
+.edu-title,
+.hobbies-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #00eaff;
+  letter-spacing: 0.5px;
+}
+
+/* === HORIZONTAL TIMELINE === */
+.timeline {
+  display: flex;
+  justify-content: flex-start; /* Changed from center */
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
+  margin: 60px auto;
+  max-width: 1100px;
+  overflow-x: auto;
+  padding: 40px 60px; /* Added horizontal padding */
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 60px; /* Ensures leftmost card visible */
+  box-sizing: border-box;
+}
+
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  flex: 0 0 320px;
+  scroll-snap-align: center;
+  text-align: center;
+  animation: slideUp 0.8s ease forwards;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.timeline-dot {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 50%;
+  margin: 0 auto 25px auto;
+  box-shadow: 0 0 10px #00c6ff, 0 0 25px #0072ff;
+  position: relative;
+  z-index: 3;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transform-style: preserve-3d;
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px) rotateX(3deg);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+}
+
+.timeline-content h4 {
+  font-size: 1.2rem;
+  color: #00eaff;
+  margin-bottom: 8px;
+}
+
+.timeline-content h5 {
+  color: #ccc;
+  margin: 4px 0;
+}
+
+.year {
+  color: #ffcc00;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* === HOBBIES SECTION === */
+.hobbies-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.hobby-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.hobby-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px) rotateY(3deg);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+}
+
+.hobby-card h4 {
+  color: #00eaff;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.hobby-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* === SCROLLBAR === */
+.timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 10px;
+}
+
+.timeline::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .timeline {
+    gap: 30px;
+  }
+
+  .timeline-item {
+    flex: 0 0 280px;
+  }
+
+  .edu-title,
+  .hobbies-title {
+    font-size: 1.7rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+}
