@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Hero.css";
-import profilePic from "../assets/MY-PIC.jpg"; 
+// import profilePic from "../assets/MY-PIC.jpg"; 
 import resumeFile from "../assets/resume.pdf";
 
 const Hero = () => {
@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-image">
-        <img src={profilePic} alt="Hemanth Battula" />
+        {/* <img src={profilePic} alt="Hemanth Battula" /> */}
       </div>
     </section>
   );
