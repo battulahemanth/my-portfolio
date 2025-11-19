@@ -12,7 +12,7 @@ const Projects = () => {
     },
     {
       title: "GearGrid",
-      desc: "Car parts frontendend website using HTML,CSS.",
+      desc: "Car parts frontend website using HTML, CSS.",
       link: "https://hm-battula.github.io/carparts-frontend/",
     },
     {
@@ -21,9 +21,9 @@ const Projects = () => {
       link: "#",
     },
     {
-      title: "Food Delivery Admin Panel",
-      desc: "Admin dashboard for managing restaurants, orders, and payments with dynamic graphs.",
-      link: "#",
+      title: "Traveling booking website",
+      desc: "A smart travel service system offering seamless trip planning and booking for Ranadeep Travels.",
+      link: "https://ranadeep-travels.vercel.app/",
     },
     
   ];
